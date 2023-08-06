@@ -1,0 +1,150 @@
+.profile {
+  position: relative;
+}
+
+.updateModalBody {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.updateModalGroup {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.updateModalGroup label {
+  width: 5rem;
+}
+
+.updateModalGroup input {
+  background-color: white;
+  border: 1px solid gray;
+  width: 100%;
+  font-size: 20px;
+}
+
+.updateModalBody button {
+  margin: 0.5rem auto 0 auto;
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.studentInfoContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.studentInfoContent h5 {
+  font-weight: bold;
+  margin: 0;
+}
+.studentInfoContent > * {
+  text-align: center;
+}
+
+.studentInfoImage {
+  width: 100%;
+  text-align: center;
+}
+
+.studentInfoImage img {
+  max-width: 40%;
+  max-height: 50%;
+  aspect-ratio: 1/1;
+  /* object-fit: cover; */
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.updateModalBody.image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  height: 50%;
+  padding-bottom: 0;
+}
+
+.updateModalBody.image img {
+  width: 20%;
+  aspect-ratio: 1/1;
+  /* object-fit: cover; */
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.updateModalBody.image label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.updateModalBody.image label:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.editProfileButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* .editProfileButton,
+.updateProfileButton {
+  padding: 0 1rem;
+} */
+
+@media only screen and (min-width: 600px) {
+  .studentInfoImage img {
+    max-width: 35%;
+    max-height: 35%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .studentInfoImage {
+    max-width: 220px;
+    max-height: 220px;
+  }
+  .studentInfoImage img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .studentInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .studentInfoContent > * {
+    text-align: left;
+  }
+
+  .studentInfo {
+    align-items: start;
+  }
+  .studentInfoContent {
+    border-left: 2px solid black;
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .studentInfoImage {
+    max-width: 235px;
+  }
+}

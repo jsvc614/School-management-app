@@ -1,0 +1,27 @@
+.submittedAsignments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.submittedAsignmentCard {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .submittedAsignments {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1;
+    justify-content: space-between;
+  }
+  .submittedAsignmentCard {
+    width: 47%;
+  }
+}

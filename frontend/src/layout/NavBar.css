@@ -1,0 +1,197 @@
+.navBar {
+  background-color: #060b26;
+  height: 80px;
+  font-size: 15px;
+}
+
+.navbar-container {
+  height: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.navBar ul {
+  list-style-type: none;
+}
+
+.no-mobile-nav {
+  display: none;
+  margin-left: -1rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.no-mobile-nav a {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(white 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+  text-decoration: none;
+}
+
+.rightSection {
+  display: flex;
+  color: white;
+  gap: 1rem;
+  align-items: center;
+  height: 85%;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-height: 80%;
+  width: 5rem;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition: all 250ms ease-in;
+}
+
+.userInfo img {
+  max-width: 80%;
+}
+
+.userInfo p {
+  display: none;
+}
+
+.notificationIcon {
+  cursor: pointer;
+}
+
+.rightSection button {
+  border: 2px solid white;
+  background: #060b26;
+}
+
+.nav-menu {
+  background-color: #060b26;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.navbar-toggle {
+  height: 80px;
+}
+
+.navbar-toggle a {
+  text-decoration: none;
+}
+
+.nav-menu.active .navbar-toggle {
+  width: 100%;
+}
+
+.nav-menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 1.2rem;
+}
+
+.menu-bars svg {
+  font-size: 35px;
+}
+
+.navbar-toggle a {
+  color: white;
+  font-size: 20px;
+}
+
+.css-fvc8ir-MuiBadge-badge {
+  margin: -4px 0 !important;
+}
+
+.css-1c32n2y-MuiBadge-root {
+  cursor: pointer !important;
+  font-size: 20px !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: 35px !important;
+}
+@media (hover: hover) {
+  .userInfo:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .rightSection {
+    gap: 2rem;
+  }
+  .navBar {
+    font-size: 20px;
+  }
+  .userInfo {
+    width: 11rem;
+    justify-content: space-between;
+  }
+
+  .userInfo img {
+    max-width: 30%;
+  }
+
+  .userInfo p {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .menu-bars {
+    display: none;
+  }
+  .no-mobile-nav {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .navbar-toggle a:hover {
+    background-position: 100% 100%;
+    background-size: 100% 1px;
+  }
+  .rightSection {
+    font-size: 20px;
+    gap: 2rem;
+  }
+
+  .userInfo {
+    width: 11rem;
+  }
+}
+@media only screen and (min-width: 1560px) {
+  .navbar-container {
+    margin: 0 auto;
+  }
+}

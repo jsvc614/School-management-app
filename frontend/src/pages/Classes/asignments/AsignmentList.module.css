@@ -1,0 +1,111 @@
+.asignmentsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  height: 100%;
+}
+
+.TestCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.submitUntilText {
+  text-decoration: underline;
+}
+
+.fileInput {
+  height: 40px;
+  background-color: white;
+
+  padding: 0;
+}
+.fileInput::file-selector-button {
+  border-radius: 0.5rem;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+.fileInput::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+.fileInput::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+.showResults {
+  margin-top: 1rem;
+}
+
+.teacherButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fileName {
+  /* max-width: 70%; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.removeButton {
+  font-size: 45px;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(45deg);
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
+
+.noAsignments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.noAsignments button {
+  width: 120px;
+}
+
+.submitUntilText {
+  text-underline-offset: 3px;
+}
+
+@media only screen and (min-width: 1050px) {
+  .asignmentsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .TestCard {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .fileName {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 730px) {
+  .teacherButtons {
+    flex-direction: row;
+  }
+}

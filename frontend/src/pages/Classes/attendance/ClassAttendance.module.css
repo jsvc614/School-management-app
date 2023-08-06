@@ -1,0 +1,55 @@
+.attendanceTable {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.attendanceTable td,
+.attendanceTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.attendanceTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.attendanceTable tr {
+  cursor: pointer;
+}
+
+.attendanceTable tr:hover {
+  background-color: #ddd;
+}
+
+.attendanceTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #060b26;
+  color: white;
+}
+
+.fillClassAttendanceTable {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.attendanceFillModal {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fillAttendanceButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.studentLine svg:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}

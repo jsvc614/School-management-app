@@ -1,0 +1,15 @@
+.notificationsContainer {
+  font-size: 20px;
+  width: 100%;
+  border: 1px solid gray;
+  border-bottom: 0;
+  cursor: pointer;
+}
+.notificationsContainer div {
+  padding: 0.5rem;
+}
+.read {
+  font-weight: lighter;
+}
+.undread {
+}

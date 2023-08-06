@@ -1,0 +1,86 @@
+.classInfoHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.classInfoHeader h1,
+.studentsList h5 {
+  margin: 0;
+}
+
+.studentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.studentCards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.studentCard {
+  padding: 1rem;
+  cursor: pointer;
+  transition: 250ms;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.studentCard:hover {
+  background-color: #ddd;
+}
+
+.classStudentsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .classInfoHeader {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .classStudentsHeader {
+    gap: 1rem;
+  }
+
+  .teacherButtons {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .classInfoHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .studentCards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .studentCard {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .studentsList {
+    justify-content: flex-start;
+  }
+  .studentCard {
+  }
+}

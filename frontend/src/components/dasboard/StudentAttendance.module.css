@@ -1,0 +1,34 @@
+.studentAttendanceTable {
+}
+
+.studentAttendanceTable {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 17px;
+}
+
+.studentAttendanceTable td,
+.studentAttendanceTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.studentAttendanceTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.studentAttendanceTable tr:not(:first-child) {
+  cursor: pointer;
+}
+
+.studentAttendanceTable tr:hover {
+  background-color: #ddd;
+}
+
+.studentAttendanceTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #060b26;
+  color: white;
+}

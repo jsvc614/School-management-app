@@ -1,0 +1,79 @@
+.eventsContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.teacherDash,
+.studentDash {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.studentDash img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.studentDash a {
+  width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+  .studentDash {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .studentDash img {
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .studentDash a {
+    width: 47%;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .teacherDash {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+  .studentDash {
+    gap: 2.5rem;
+  }
+
+  .studentDash img {
+    margin-bottom: 0;
+  }
+  .eventsContainer {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .studentDash,
+  .teacherDash {
+    flex-wrap: nowrap;
+  }
+  .studentDash img {
+    max-width: 100%;
+    height: 400px;
+  }
+  .studentDash a {
+    width: 28%;
+  }
+}
