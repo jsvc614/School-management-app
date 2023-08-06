@@ -7,8 +7,10 @@ import { IconContext } from "react-icons";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../features/auth/authSlice";
 import { nanoid } from "@reduxjs/toolkit";
+import Badge from "@mui/material/Badge";
+import MailIcon from "@mui/icons-material/Mail";
 
-function Navbar({ badge, logout }) {
+function Navbar({ badge, logout, onShowNotifications, notifications }) {
   const [sidebar, setSidebar] = useState(false);
 
   const user = useSelector(selectCurrentUser);
@@ -61,7 +63,16 @@ function Navbar({ badge, logout }) {
           </Link>
           <ul className="no-mobile-nav">{navLinkContent}</ul>
           <div className="rightSection">
-            {badge}
+            <Badge
+              onClick={onShowNotifications}
+              badgeContent={notifications?.filter((noti) => !noti.read).length}
+              className="notificationIcon"
+              color="secondary"
+              style={{ cursor: "pointer" }}
+            >
+              <span className="notificationTooltip">Show notifications</span>
+              <MailIcon sx={{ fontSize: "35px" }} />
+            </Badge>
             <div className={"userInfo"} onClick={goToStudentProfile}>
               <img src={user?.image.url} alt=""></img>
               <p>{user?.fullName}</p>

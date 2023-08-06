@@ -123,18 +123,54 @@
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 .css-fvc8ir-MuiBadge-badge {
-  margin: -4px 0 !important;
+  margin: -2px 0;
 }
 
 .css-1c32n2y-MuiBadge-root {
-  cursor: pointer !important;
-  font-size: 20px !important;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-  font-size: 35px !important;
+  font-size: 35px;
 }
+=======
+.notificationTooltip {
+  visibility: hidden;
+  background-color: rgb(81, 73, 73);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  /* Position the tooltip */
+  position: absolute;
+  top: 35px;
+  left: -33px;
+  z-index: 1;
+  font-size: 15px;
+  transition: all 250ms ease-in-out;
+}
+
+.notificationTooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(81, 73, 73) transparent;
+}
+
+@media (hover: hover) {
+  .notificationIcon:hover .notificationTooltip {
+    visibility: visible;
+  }
+}
+
+>>>>>>> 2da574f (first)
 @media (hover: hover) {
   .userInfo:hover {
     background: white;

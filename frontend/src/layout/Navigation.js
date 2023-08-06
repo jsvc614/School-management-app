@@ -2,12 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../features/auth/authService";
 import Spinner from "../components/spinner/Spinner";
-import navClasses from "./Navigation.module.css";
 import { SocketContext } from "../context/socket";
 import { useGetNotificationsQuery } from "../features/notifications/notificationsService";
 import NotificationsList from "../components/notifications/NotificationsList";
-import Badge from "@mui/material/Badge";
-import MailIcon from "@mui/icons-material/Mail";
 import NavBar from "./NavBar";
 import ErrorModal from "../components/pop/ErrorModal";
 
@@ -65,18 +62,8 @@ const Navigation = () => {
   return (
     <>
       <NavBar
-        badge={
-          <Badge
-            onClick={onShowNotifications}
-            badgeContent={notifications?.filter((noti) => !noti.read).length}
-            className={navClasses.notificationIcon}
-          >
-            <span className={navClasses.notificationTooltip}>
-              Show notifications
-            </span>
-            <MailIcon />
-          </Badge>
-        }
+        notifications={notifications}
+        onShowNotifications={onShowNotifications}
         logout={logoutUser}
       />
       {isLoading && <Spinner />}
