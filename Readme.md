@@ -7,15 +7,14 @@ School management app
 https://schoolapp-u33p.onrender.com
 
 - initial load afte 15m of inactivity takes some time (onrender.com specific)
+- Sign in as teacher: Email: teacher1@gmail.com Password: 123
+- Sign in as student: Email: student3@gmail.com Password: 123
 
 ## Main Technologies
 
 React, rtk query, ract full calendar, react-router, react-input emoji, node.js, express.js, socketio, mongodb, cloudinary, jwt, nodemailer
 
 ## Main Features
-
-- Sign in as teacher: Email: teacher1@gmail.com Password: 123
-- Sign in as student: Email: student3@gmail.com Password: 123
 
 Common features
 
