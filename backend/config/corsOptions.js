@@ -1,7 +1,13 @@
-let allowedOrigins = ["http://localhost:3000"];
-if (process.env.NODE_ENV === "production") {
-  allowedOrigins = ["https://school-management-app-one.vercel.app"];
-}
+// let allowedOrigins = ["http://localhost:3000"];
+// if (process.env.NODE_ENV === "production") {
+//   allowedOrigins = ["https://school-management-app-one.vercel.app"];
+// }
+
+let allowedOrigins = [
+  "https://school-management-app-one.vercel.app",
+  "https://school-management-app-jurajsvec614-gmailcom.vercel.app",
+  "https://school-management-app-git-main-jurajsvec614-gmailcom.vercel.app",
+];
 
 const corsOptions = {
   origin: (origin, callback) => {

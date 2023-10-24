@@ -1,9 +1,15 @@
+// const io = require("socket.io")(8900, {
+//   cors: {
+//     origin:
+//       process.env.NODE_ENV === "production"
+//         ? ["https://schoolapp-socketio.onrender.com"]
+//         : ["http://localhost:3000"],
+//   },
+// });
+
 const io = require("socket.io")(8900, {
   cors: {
-    origin:
-      process.env.NODE_ENV === "production"
-        ? ["https://schoolapp-socketio.onrender.com"]
-        : ["http://localhost:3000"],
+    origin: ["https://school-management-app-one.vercel.app"],
   },
 });
 
