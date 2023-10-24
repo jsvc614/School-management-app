@@ -6,7 +6,7 @@ School management app
 
 https://schoolapp-u33p.onrender.com
 
-- initial load afte 15m of inactivity takes some time (onrender.com specific)
+- first website load takes some time(onrender.com specific)
 - Sign in as teacher: Email: teacher1@gmail.com Password: 123
 - Sign in as student: Email: student3@gmail.com Password: 123
 
