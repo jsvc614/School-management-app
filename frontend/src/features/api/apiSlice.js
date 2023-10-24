@@ -9,7 +9,7 @@ const baseQuery = fetchBaseQuery({
   // baseUrl: "http://10.0.2.2:5000",
   baseUrl:
     process.env.NODE_ENV === "production"
-      ? "https://school-management-app-uqso-hjfczvwdc-jurajsvec614-gmailcom.vercel.app"
+      ? "https://school-management-app-uqso.vercel.app"
       : "http://localhost:5000",
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {

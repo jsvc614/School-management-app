@@ -1,8 +1,6 @@
 let allowedOrigins = ["http://localhost:3000"];
 if (process.env.NODE_ENV === "production") {
-  allowedOrigins = [
-    "https://school-management-7dlsga9og-jurajsvec614-gmailcom.vercel.app",
-  ];
+  allowedOrigins = ["https://school-management-app-one.vercel.app"];
 }
 
 const corsOptions = {
