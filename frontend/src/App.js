@@ -21,7 +21,7 @@ function App() {
       setSocket(
         io(
           process.env.NODE_ENV === "production"
-            ? "https://schoolapp-socketio.onrender.com"
+            ? "https://school-management-app-u8st-oeyslomj2-jurajsvec614-gmailcom.vercel.app"
             : "http://localhost:8900"
         )
       );
