@@ -1,6 +1,8 @@
 let allowedOrigins = ["http://localhost:3000"];
 if (process.env.NODE_ENV === "production") {
-  allowedOrigins = ["https://schoolapp-u33p.onrender.com"];
+  allowedOrigins = [
+    "https://school-management-7dlsga9og-jurajsvec614-gmailcom.vercel.app",
+  ];
 }
 
 const corsOptions = {

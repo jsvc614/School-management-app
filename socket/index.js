@@ -2,7 +2,9 @@ const io = require("socket.io")(8900, {
   cors: {
     origin:
       process.env.NODE_ENV === "production"
-        ? ["https://schoolapp-u33p.onrender.com"]
+        ? [
+            "https://school-management-7dlsga9og-jurajsvec614-gmailcom.vercel.app",
+          ]
         : ["http://localhost:3000"],
   },
 });
