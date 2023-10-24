@@ -65,127 +65,128 @@ function App() {
     <SocketContext.Provider value={socket}>
       <Suspense>
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="login" element={<Login />} />
-            <Route element={<Protected />}>
-              <Route path="/" element={<DashLayout />}>
+          {/* <Route path="/" element={<Layout />}> */}
+
+          <Route path="/" element={<Login />} />
+          <Route element={<Protected />}>
+            <Route path="/" element={<DashLayout />}>
+              <Route
+                path="/dashboard"
+                element={
+                  <Suspense>
+                    <Dashboard />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="profile/:email"
+                element={
+                  <Suspense>
+                    <UserProfile />
+                  </Suspense>
+                }
+              />
+              <Route path="classes">
                 <Route
-                  path="/"
+                  index
                   element={
                     <Suspense>
-                      <Dashboard />
+                      <Classes />
                     </Suspense>
                   }
                 />
                 <Route
-                  path="profile/:email"
+                  path=":classId"
                   element={
                     <Suspense>
-                      <UserProfile />
-                    </Suspense>
-                  }
-                />
-                <Route path="classes">
-                  <Route
-                    index
-                    element={
-                      <Suspense>
-                        <Classes />
-                      </Suspense>
-                    }
-                  />
-                  <Route
-                    path=":classId"
-                    element={
-                      <Suspense>
-                        <ClassInfo />
-                      </Suspense>
-                    }
-                  />
-                  <Route
-                    path=":classId/asignments"
-                    element={
-                      <Suspense>
-                        <AsignmentList />
-                      </Suspense>
-                    }
-                  />
-                  <Route element={<RequireAuth allowedRoles={ROLES.Teacher} />}>
-                    <Route
-                      path="new"
-                      element={
-                        <Suspense>
-                          <NewClass />
-                        </Suspense>
-                      }
-                    />
-                    <Route
-                      path=":classId/asignments/:asignmentId/submitted"
-                      element={
-                        <Suspense>
-                          <AsignmentSubmittedFiles />
-                        </Suspense>
-                      }
-                    />
-                    <Route
-                      path=":classId/attendance"
-                      element={
-                        <Suspense>
-                          <ClassAttendance />
-                        </Suspense>
-                      }
-                    />
-                  </Route>
-                </Route>
-                <Route element={<RequireAuth allowedRoles={ROLES.Student} />}>
-                  <Route
-                    path="grades"
-                    element={
-                      <Suspense>
-                        <StudentGrades />
-                      </Suspense>
-                    }
-                  />
-                  <Route
-                    path="attendance"
-                    element={
-                      <Suspense>
-                        <StudentAttendance />
-                      </Suspense>
-                    }
-                  />
-                  <Route
-                    path="asignments/:asignmentId/results"
-                    element={
-                      <Suspense>
-                        <AsignmentResults />
-                      </Suspense>
-                    }
-                  />
-                </Route>
-                <Route
-                  path="messages"
-                  element={
-                    <Suspense>
-                      <MessagesList socket={socket} />
+                      <ClassInfo />
                     </Suspense>
                   }
                 />
                 <Route
-                  path="schedule"
+                  path=":classId/asignments"
                   element={
                     <Suspense>
-                      <Schedule />
+                      <AsignmentList />
                     </Suspense>
                   }
                 />
-                <Route element={<RequireAuth allowedRoles={ROLES.Admin} />}>
-                  <Route path="addteacher" element={<p>addteacher</p>} />
+                <Route element={<RequireAuth allowedRoles={ROLES.Teacher} />}>
+                  <Route
+                    path="new"
+                    element={
+                      <Suspense>
+                        <NewClass />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path=":classId/asignments/:asignmentId/submitted"
+                    element={
+                      <Suspense>
+                        <AsignmentSubmittedFiles />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path=":classId/attendance"
+                    element={
+                      <Suspense>
+                        <ClassAttendance />
+                      </Suspense>
+                    }
+                  />
                 </Route>
               </Route>
+              <Route element={<RequireAuth allowedRoles={ROLES.Student} />}>
+                <Route
+                  path="grades"
+                  element={
+                    <Suspense>
+                      <StudentGrades />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="attendance"
+                  element={
+                    <Suspense>
+                      <StudentAttendance />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="asignments/:asignmentId/results"
+                  element={
+                    <Suspense>
+                      <AsignmentResults />
+                    </Suspense>
+                  }
+                />
+              </Route>
+              <Route
+                path="messages"
+                element={
+                  <Suspense>
+                    <MessagesList socket={socket} />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="schedule"
+                element={
+                  <Suspense>
+                    <Schedule />
+                  </Suspense>
+                }
+              />
+              <Route element={<RequireAuth allowedRoles={ROLES.Admin} />}>
+                <Route path="addteacher" element={<p>addteacher</p>} />
+              </Route>
             </Route>
-            <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
+          {/* </Route> */}
         </Routes>
       </Suspense>
     </SocketContext.Provider>

@@ -40,7 +40,7 @@ function Navbar({ badge, logout, onShowNotifications, notifications }) {
       return (
         <li className="navbar-toggle" key={nanoid()}>
           <NavLink
-            to={navLink === "Home" ? "/" : navLink.toLowerCase()}
+            to={navLink === "Home" ? "/dashboard" : navLink.toLowerCase()}
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
